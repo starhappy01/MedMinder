@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addMedActivity">
+
+
+    <TextView
+        android:id="@+id/mRemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="ENTER MEDICATION:"
+        android:textColor="#3F51B5"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/mReminder" android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/mRemText" android:layout_marginStart="60dp"
+        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="60dp"
+        android:layout_marginEnd="60dp" app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="60dp"/>
+
+    <Button
+        android:id="@+id/mAddTimeButton"
+        android:layout_width="0dp"
+        android:layout_height="65sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="add time"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mReminder" />
+    <TextView
+        android:text="-- : --"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mShowTime" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/mAddTimeButton" android:textSize="30sp"/>
+    <RadioGroup
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/freqText" android:layout_marginTop="48dp"
+        android:id="@+id/radGroup"
+        >
+
+        <RadioButton
+            android:id="@+id/dailyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginRight="150dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="DAILY"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mShowTime"
+
+            tools:layout_editor_absoluteX="0dp" />
+
+
+        <RadioButton
+            android:id="@+id/altDailyButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginRight="150dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="ALTERNATE DAYS"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mShowTime"
+
+            tools:layout_editor_absoluteX="0dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/freqText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="ADD FREQUENCY:"
+        android:textColor="#3F51B5"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mShowTime" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="SAVE"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radGroup" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
